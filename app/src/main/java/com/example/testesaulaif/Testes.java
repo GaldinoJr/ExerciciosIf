@@ -99,7 +99,7 @@ public class Testes {
      * 1.2 - Faça um programa que você passe a descrição da gravidade (Baixa, Média, ou Alta)
      * E ele retorne a quantidade de de bombeiros necessários para atuar no chamado
      */
-    public int descobrirCodigoGravidade(String descricaoGravidade){
+    public int  descobrirCodigoGravidade(String descricaoGravidade){
         return -1;
     }
 
@@ -132,22 +132,42 @@ public class Testes {
      * Descrição
      * Fazer um programa que grave a quantidade de hospedes de um hotel, e a cada novo hospede
      * devolver a situação da capacidade do hotel
+     * Regras:
      * Hotel com até 2 hospedes, Devolver, com vagas
      * Hotel com mais de 2 hospedes e até 5, Devolver, com poucas vagas
      * Hotel com 5 hospedes, Devolver, lotado
      */
+
+    int quantidadeHospedes = 0;
     public String darEntradaNoHotelEDevolverSituacao(String nomeHospede){
-        return null;
+        if(quantidadeHospedes < 5){ // ainda tenho vaga
+            quantidadeHospedes = quantidadeHospedes + 1;
+            if(quantidadeHospedes <= 2){
+                return "com vagas";
+            }
+            else{
+                return "com poucas vagas";
+            }
+        }
+        else{ // nao tenho mais vaga
+           return "lotado";
+        }
     }
 
     /**
      * 3.1 Hotel:
      * Descrição
      * Fazer um programa que grave a quantidade de hospedes de um hotel, e a cada novo hospede
-     * devolver a situação da capacidade do hotel, e o nome de todos os hospedes do hotel
+     * devolver a situação da capacidade do hotel, e o nome de todos os hospedes do hotel, seeee
+     * o Hotel, já estiver lotado, passsar os nomes de todos os hospedes, exceto, o que nao conseguiu
+     * entrar
      * Hotel com até 2 hospedes, Devolver, com vagas
      * Hotel com mais de 2 hospedes e até 5, Devolver, com poucas vagas
      * Hotel com 5 hospedes, Devolver, lotado
+     *
+     * Retorno status - nomes
+     * Ex: com vagas - joao
+     * Ex: com vagas - joao, maria
      */
     public String darEntradaNoHotelEDevolverSituacaoMaisNomeDosHospedes(String nomeHospede){
         return null;
