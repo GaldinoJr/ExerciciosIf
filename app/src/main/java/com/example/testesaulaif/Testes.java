@@ -267,11 +267,10 @@ public class Testes {
      */
 
     /**
-     ** Faça um programa que você passe, o nome de 3 Substancias quimicas, a concentração dessa substancia
-     * e retorne a string formatada "Substancia X, com concencentração Y"
-     * Dessa substancia, Ex:
+     ** Faça um programa que você passe, o nome de 3 Substancias quimicas, e a concentração de cada substancia
+     * e retorne a string formatada, ex: "Substancia X, com concencentração Y%"
      * Entrada:
-     * Substancia quimica: Ácido
+     * Substancia quimica: "Ácido"
      * Concentração: 65
      *
      * Retorno:
