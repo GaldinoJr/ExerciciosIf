@@ -151,4 +151,46 @@ class ExampleUnitTest {
         mensagem = testes.darEntradaNoHotelEDevolverSituacao("hospede 06")
         assertEquals( "lotado", mensagem)
     }
+
+    @Test
+    fun testdarEntradaNoHotelEDevolverSituacaoMaisNomeDosHospedes(){
+        val testes = Testes()
+        var mensagem = testes.darEntradaNoHotelEDevolverSituacaoMaisNomeDosHospedes("hospede 01")
+        assertEquals( "Status: com vagas - Nomes: hospede 01, ", mensagem)
+        //---------------------------------------------//
+        mensagem = testes.darEntradaNoHotelEDevolverSituacaoMaisNomeDosHospedes("hospede 02")
+        assertEquals( "Status: com vagas - Nomes: hospede 01, hospede 02, ", mensagem)
+        //---------------------------------------------//
+        mensagem = testes.darEntradaNoHotelEDevolverSituacaoMaisNomeDosHospedes("hospede 03")
+        assertEquals(
+            "Status: com poucas vagas - Nomes: hospede 01, hospede 02, hospede 03, ", mensagem)
+        //---------------------------------------------//
+        mensagem = testes.darEntradaNoHotelEDevolverSituacaoMaisNomeDosHospedes ("hospede 04")
+        assertEquals(
+            "Status: com poucas vagas - Nomes: hospede 01, hospede 02, hospede 03, hospede 04, ", mensagem)
+        //---------------------------------------------//
+        mensagem = testes.darEntradaNoHotelEDevolverSituacaoMaisNomeDosHospedes("hospede 05")
+        assertEquals(
+            "Status: com poucas vagas - Nomes: hospede 01, hospede 02, hospede 03, hospede 04, hospede 05, ", mensagem)
+        //---------------------------------------------//
+        mensagem = testes.darEntradaNoHotelEDevolverSituacaoMaisNomeDosHospedes("hospede 06")
+        assertEquals( "Status: lotado - Nomes: hospede 01, hospede 02, hospede 03, hospede 04, hospede 05, ", mensagem)
+    }
+
+    @Test
+    fun testcalcularQuantidadeComodos(){
+        val testes = Testes()
+
+        val calcularQuantidadeComodos = testes.calcularQuantidadeComodos(10.0, 50.0)
+        assertEquals(100,calcularQuantidadeComodos)
+    }
+
+    @Test
+    fun testconcatenarDoisNumerosInteiros(){
+        val testes = Testes()
+        val concatenarDoisNumerosInteiros = testes.concatenarDoisNumerosInteiros(145, 2)
+
+        assertEquals("1452",concatenarDoisNumerosInteiros)
+    }
+
 }

@@ -138,20 +138,24 @@ public class Testes {
      * Hotel com 5 hospedes, Devolver, lotado
      */
 
-    int quantidadeHospedes = 0;
+
     public String darEntradaNoHotelEDevolverSituacao(String nomeHospede){
-        if(quantidadeHospedes < 5){ // ainda tenho vaga
+        String statusDeVaga = "";
+        if(quantidadeHospedes < 5){
+            // ainda tenho vaga
             quantidadeHospedes = quantidadeHospedes + 1;
             if(quantidadeHospedes <= 2){
-                return "com vagas";
+                statusDeVaga = "com vagas";
             }
             else{
-                return "com poucas vagas";
+                statusDeVaga =  "com poucas vagas";
             }
         }
         else{ // nao tenho mais vaga
-           return "lotado";
+            statusDeVaga =  "lotado";
         }
+
+        return statusDeVaga;
     }
 
     /**
@@ -169,8 +173,25 @@ public class Testes {
      * Ex: com vagas - joao
      * Ex: com vagas - joao, maria
      */
+    String nomes = "";
+    int quantidadeHospedes = 0;
     public String darEntradaNoHotelEDevolverSituacaoMaisNomeDosHospedes(String nomeHospede){
-        return null;
+        String statusDeVaga = "";
+        if(quantidadeHospedes < 5){
+            // ainda tenho vaga
+            nomes = nomes + nomeHospede + ", ";
+            quantidadeHospedes = quantidadeHospedes + 1;
+            if(quantidadeHospedes <= 2){
+                statusDeVaga = "com vagas";
+            }
+            else{
+                statusDeVaga =  "com poucas vagas";
+            }
+        }
+        else{ // nao tenho mais vaga
+            statusDeVaga =  "lotado";
+        }
+        return "Status: " + statusDeVaga + " - Nomes: " + nomes;
     }
 
     /**
@@ -190,4 +211,82 @@ public class Testes {
                                                int tipoVeiculo){
         return null;
     }
+
+    /**
+     * Faça um programa que seja capaz de calcular e retornar a área de um retangulo
+     * área = base * altura
+     */
+    public double calcularArea(double base, double altura){
+        return base * altura;
+    }
+
+    /**
+     * Faça um programa que calcule e retorne a soma dos numeros:
+     * (A * B) / C
+     */
+
+    public double calcularValores(double a, double b, double c){
+        return (a * b) / c;
+    }
+
+    /**
+     * Faça um programa que receba dois números inteiros, faça a soma, e retorne exatamente essa frase:
+     * Eu Sou um programador, e a soma desses números é: (colocar aqui o valor da soma)
+     */
+    public String somarERetornar(int a, int b){
+        int resultado = a + b;
+        return "Eu Sou um programador, e a soma desses números é: " + resultado;
+    }
+
+    /**
+     * Faça um programa que receba dois numeros inteiros, CONCATENE os dois, e retorne
+     * Ex, se passar 1 e 2, tem que retornar "12
+     */
+    public String concatenarDoisNumerosInteiros(int numero1, int numero2){
+        String textReferenteNumero1 = String.valueOf(numero1);
+        return  textReferenteNumero1 + numero2;
+    }
+
+
+    /**
+     * Faça um programa que receba a largura e comprimento de um terreno,
+     * verifique e retorne quantos comodos com valores 5 m2 é possível ter dentro desse terreno
+     * Obs. retorno TEM QUE SER  inteiro
+     */
+    public int calcularQuantidadeComodos(double largura, double comprimento){
+        double resultado = largura * comprimento;
+
+        double quantidadeComodos = resultado / 5;
+        return (int) quantidadeComodos;
+    }
+
+    /**
+     * Faça um programa que passe tres variaveis do tipo double, calcule o resultado da operação
+     * e retorne somente a parte inteira da operação
+     * operação = A dividido por B, multiplicado C
+     */
+
+    /**
+     ** Faça um programa que você passe, o nome de 3 Substancias quimicas, a concentração dessa substancia
+     * e retorne a string formatada "Substancia X, com concencentração Y"
+     * Dessa substancia, Ex:
+     * Entrada:
+     * Substancia quimica: Ácido
+     * Concentração: 65
+     *
+     * Retorno:
+     *
+     * "Substancia Ácido, com concencentração 65%"
+     */
+
+    /**
+     * Faça um programa que seja capaz de calcular a área de uma construção
+     * Se a área for até 20 metros, retornar: "Insuficiente para construção"
+     * Se a área for maior que 20 até 50 metros, retornar: "Possível construir uma casa pequena"
+     * Se a área for maior 50 metros, retornar: "Possível construir uma casa grande"
+     *
+     * Obs: área = base * altura
+     */
+
+
 }
