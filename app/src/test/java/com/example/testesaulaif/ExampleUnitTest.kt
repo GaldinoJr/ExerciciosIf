@@ -193,4 +193,30 @@ class ExampleUnitTest {
         assertEquals("1452",concatenarDoisNumerosInteiros)
     }
 
+    @Test
+    fun testverificarVelocidadePermitida(){
+        val testes = Testes()
+
+        // testes com carro
+        var retorno = testes.verificarVelocidadePermitida(100.0, 90.0, 1)
+        assertEquals("Dentro da velocidade permitida", retorno)
+
+        retorno = testes.verificarVelocidadePermitida(100.0, 110.0, 1)
+        assertEquals("Fora da velocidade permitida", retorno)
+
+        // testes com moto
+        retorno = testes.verificarVelocidadePermitida(100.0, 110.0, 3)
+        assertEquals("Dentro da velocidade permitida", retorno)
+
+        retorno = testes.verificarVelocidadePermitida(100.0, 130.0, 3)
+        assertEquals("Fora da velocidade permitida", retorno)
+
+        // testes com caminhao
+        retorno = testes.verificarVelocidadePermitida(100.0, 49.0, 2)
+        assertEquals("Dentro da velocidade permitida", retorno)
+
+        retorno = testes.verificarVelocidadePermitida(100.0, 51.0, 2)
+        assertEquals("Fora da velocidade permitida", retorno)
+    }
+
 }

@@ -205,6 +205,11 @@ public class Testes {
      * Observaçõa importante: Para fazer esse exercicio, considere, que uma moto pode andar 20%
      * acima da velocidade de um carro, e um caminhao deve andar 50% abaixo da velocidade de um carro
      *
+     * Tipos dos veículos,
+     * 1 para carro
+     * 2 para caminhao
+     * 3 para moto
+     *
      * Retorno: Dentro da velocidade permitida, ou Fora da velocidade permitida
      */
     public String verificarVelocidadePermitida(Double velocidadeMaximaParaCarro, Double velocidadeAtual,
