@@ -213,7 +213,7 @@ public class Testes {
      * Retorno: Dentro da velocidade permitida, ou Fora da velocidade permitida
      */
     public String verificarVelocidadePermitida(Double velocidadeMaximaParaCarro, Double velocidadeAtual,
-                                               int tipoVeiculo){
+                                               String tipoVeiculo){
         return null;
     }
 

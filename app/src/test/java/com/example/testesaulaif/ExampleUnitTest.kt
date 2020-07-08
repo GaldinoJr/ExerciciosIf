@@ -198,24 +198,24 @@ class ExampleUnitTest {
         val testes = Testes()
 
         // testes com carro
-        var retorno = testes.verificarVelocidadePermitida(100.0, 90.0, 1)
+        var retorno = testes.verificarVelocidadePermitida(100.0, 90.0, "Carro")
         assertEquals("Dentro da velocidade permitida", retorno)
 
-        retorno = testes.verificarVelocidadePermitida(100.0, 110.0, 1)
+        retorno = testes.verificarVelocidadePermitida(100.0, 110.0, "Carro")
         assertEquals("Fora da velocidade permitida", retorno)
 
         // testes com moto
-        retorno = testes.verificarVelocidadePermitida(100.0, 110.0, 3)
+        retorno = testes.verificarVelocidadePermitida(100.0, 110.0, "Moto")
         assertEquals("Dentro da velocidade permitida", retorno)
 
-        retorno = testes.verificarVelocidadePermitida(100.0, 130.0, 3)
+        retorno = testes.verificarVelocidadePermitida(100.0, 130.0, "Moto")
         assertEquals("Fora da velocidade permitida", retorno)
 
         // testes com caminhao
-        retorno = testes.verificarVelocidadePermitida(100.0, 49.0, 2)
+        retorno = testes.verificarVelocidadePermitida(100.0, 49.0, "Caminhão")
         assertEquals("Dentro da velocidade permitida", retorno)
 
-        retorno = testes.verificarVelocidadePermitida(100.0, 51.0, 2)
+        retorno = testes.verificarVelocidadePermitida(100.0, 51.0, "Caminhão")
         assertEquals("Fora da velocidade permitida", retorno)
     }
 
