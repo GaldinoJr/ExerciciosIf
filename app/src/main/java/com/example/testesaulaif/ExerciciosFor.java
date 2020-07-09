@@ -5,6 +5,9 @@ public class ExerciciosFor {
      * 1 - Faça um programa que receba um número inteiro, conte mais 10 (usando for) e
      * devolva o resultado
      */
+    public int somar10(int valor){
+        return -1;
+    }
 
     /**
      * 2 - Faça um programa que receba um número inteiro, conte mais 20 (usando for), concatene cada
