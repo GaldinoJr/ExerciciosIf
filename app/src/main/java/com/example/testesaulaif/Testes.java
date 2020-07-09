@@ -212,9 +212,43 @@ public class Testes {
      *
      * Retorno: Dentro da velocidade permitida, ou Fora da velocidade permitida
      */
+
     public String verificarVelocidadePermitida(Double velocidadeMaximaParaCarro, Double velocidadeAtual,
-                                               String tipoVeiculo){
-        return null;
+                                               int tipoVeiculo){
+        final int tipoCarro = 1;
+        final int tipoCaminhao = 2;
+        final int tipoMoto = 3;
+
+        final double percentualPermitidoCaminhao = 0.5;
+        final double percentualPermitidoMoto = 1.2;
+
+
+        if(tipoVeiculo == tipoCarro){
+            if(velocidadeAtual > velocidadeMaximaParaCarro){
+                return "Fora da velocidade permitida";
+            }
+            else{
+                return "Dentro da velocidade permitida";
+            }
+        }
+        else if(tipoVeiculo == tipoCaminhao){
+            if(velocidadeAtual > velocidadeMaximaParaCarro * percentualPermitidoCaminhao){
+                return "Fora da velocidade permitida";
+            }
+            else{
+                return "Dentro da velocidade permitida";
+            }
+        }
+        else if(tipoVeiculo == tipoMoto){
+            if(velocidadeAtual > velocidadeMaximaParaCarro * percentualPermitidoMoto){
+                return "Fora da velocidade permitida";
+            }
+            else{
+                return "Dentro da velocidade permitida";
+            }
+        }
+
+        return "Não foi possível validar";
     }
 
     /**
