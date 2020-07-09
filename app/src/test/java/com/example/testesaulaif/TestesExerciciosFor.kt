@@ -19,4 +19,24 @@ class TestesExerciciosFor {
 
         assertEquals(165, resultado)
     }
+
+    @Test
+    fun testnumeroConcatenado(){
+        val ex = ExerciciosFor()
+        var resultado = ex.numeroConcatenado(10)
+
+        assertEquals("10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ", resultado)
+
+        resultado = ex.numeroConcatenado(15200)
+
+        assertEquals("10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ", resultado)
+    }
+
+    @Test
+    fun testnumerosImpares(){
+        val ex = ExerciciosFor()
+        var resultado = ex.numerosImpares()
+
+        assertEquals("1 3 5 7 9 11 13 15 17 19 ", resultado)
+    }
 }
