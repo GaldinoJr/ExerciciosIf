@@ -6,12 +6,18 @@ public class ExerciciosFor {
      * devolva o resultado
      */
     public int somar10(int valor){
-        return -1;
+        int contador;
+
+        for(contador = 0; contador < 10; contador = contador + 1){
+            valor = valor + 1;
+        }
+
+        return valor;
     }
 
     /**
      * 2 - Faça um programa que receba um número inteiro, conte mais 20 (usando for), concatene cada
-     * número em uma string, e devolva essa string
+     * número em uma string (separando por espaço), e devolva essa string
      */
 
     /**
