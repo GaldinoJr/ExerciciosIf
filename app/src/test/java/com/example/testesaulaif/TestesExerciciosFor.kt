@@ -39,4 +39,19 @@ class TestesExerciciosFor {
 
         assertEquals("1 3 5 7 9 11 13 15 17 19 ", resultado)
     }
+
+    @Test
+    fun testmultiplicarQuatroVezes(){
+        val exerciciosFor = ExerciciosFor()
+        val valorResultado = exerciciosFor.multiplicarQuatroVezes(3)
+        assertEquals(81, valorResultado)
+    }
+
+
+    @Test
+    fun testpow(){
+        val exerciciosFor = ExerciciosFor()
+        val valorResultado = exerciciosFor.calcularPotencia(45.0,10)
+        assertEquals(373669453125, valorResultado)
+    }
 }

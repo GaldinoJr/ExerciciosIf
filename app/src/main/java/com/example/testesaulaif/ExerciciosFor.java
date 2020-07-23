@@ -36,6 +36,15 @@ public class ExerciciosFor {
      * 3 - Faça um programa que receba um numero inteiro, multiplique esse número por ele mesmo
      * 4 vezez (usando for), e devolva o resultado
      */
+    public int multiplicarQuatroVezes(int valor){
+        int contador;
+        int valorFinal = 1;
+        for(contador = 0; contador <= 3; contador++){
+            valorFinal = valorFinal * valor;
+        }
+
+        return valorFinal;
+    }
 
     /**
      * 4 - Faça um programa que receba um numero inicial, um número final, execulte o for usando esses números, concatene cada
@@ -66,6 +75,21 @@ public class ExerciciosFor {
 
     /**
      * 7 - Faça um programa que você passe um número inicial, um numero final, e some todos os valores
-     * entre esses número
+     * entre esses números (incluindo os numeros passados)
      */
+
+    /**
+     * 8 - Faça um programa, que voce passe dois números, um inteiro, e um número real
+     * calcule a potencia do numero real, usando o numero inteiro
+     */
+    public Double calcularPotencia(Double valor, int potencia){
+        int contador;
+        Double valorFinal = 1.0;
+        for(contador = 0; contador < potencia; contador++){
+            valorFinal = valorFinal * valor;
+        }
+
+        return valorFinal;
+    }
+
 }
