@@ -49,9 +49,16 @@ class TestesExerciciosFor {
 
 
     @Test
-    fun testpow(){
+    fun testcalcularPotencia(){
         val exerciciosFor = ExerciciosFor()
         val valorResultado = exerciciosFor.calcularPotencia(45.0,10)
         assertEquals(373669453125, valorResultado)
+    }
+
+    @Test
+    fun testesomarValoresEntreOsNumeros(){
+        val exerciciosFor = ExerciciosFor()
+        val valorResultado = exerciciosFor.somarValoresEntreOsNumeros(3, 6)
+        assertEquals(18, valorResultado)
     }
 }

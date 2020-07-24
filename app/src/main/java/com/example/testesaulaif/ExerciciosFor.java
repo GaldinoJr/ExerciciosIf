@@ -77,6 +77,15 @@ public class ExerciciosFor {
      * 7 - Faça um programa que você passe um número inicial, um numero final, e some todos os valores
      * entre esses números (incluindo os numeros passados)
      */
+    public Integer somarValoresEntreOsNumeros(int valorInical, int valorFinal){
+        int contador;
+        int somaValorFinal = 0;
+        for(contador = valorInical; contador <= valorFinal; contador++){
+            somaValorFinal = somaValorFinal + contador;
+        }
+
+        return somaValorFinal;
+    }
 
     /**
      * 8 - Faça um programa, que voce passe dois números, um inteiro, e um número real
