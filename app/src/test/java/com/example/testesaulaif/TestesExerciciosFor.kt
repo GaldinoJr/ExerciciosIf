@@ -66,9 +66,9 @@ class TestesExerciciosFor {
     fun testdescobrirSenha(){
         val exerciciosFor = ExerciciosFor()
 
-        val senha = 123;
+        val senha = 172631231;
 
-        val valorResultado = exerciciosFor.descobrirSenhaComTresOuMaisNumeros(senha)
+        val valorResultado = exerciciosFor.descobrirSenhaComTresOuMaisNumeros2(senha)
         assertEquals(senha, valorResultado)
     }
 }

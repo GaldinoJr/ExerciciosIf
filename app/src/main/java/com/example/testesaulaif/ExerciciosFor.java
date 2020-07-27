@@ -165,9 +165,9 @@ public class ExerciciosFor {
 
                 for (int j = 0; j < 10; j++) {
                     senhaTestada.set(posicaoTestadaDez, String.valueOf(j));
-                    if(getStringByList(senhaTestada).equals(String.valueOf(senhaVerdadeira))){
-                        return Integer.parseInt(getStringByList(senhaTestada));
-                    }
+//                    if(getStringByList(senhaTestada).equals(String.valueOf(senhaVerdadeira))){
+//                        return Integer.parseInt(getStringByList(senhaTestada));
+//                    }
                 }
                 int valorTestadoUm = Integer.parseInt(senhaTestada.get(posicaoTestadaUm));
                 if(valorTestadoUm ==9){
@@ -181,6 +181,7 @@ public class ExerciciosFor {
                 }
                 else{
                     i = 0;
+
                     valorTestadoUm++;
                     senhaTestada.set(posicaoTestadaUm, String.valueOf(valorTestadoUm));
                 }
@@ -193,7 +194,68 @@ public class ExerciciosFor {
         while (true);
     }
 
-    private String getStringByList(List<String> senhaTestada) {
+    public Integer descobrirSenhaComTresOuMaisNumeros2(Integer senhaVerdadeira) {
+        List<Integer> senhaTestada = new LinkedList<>();
+
+        senhaTestada.add(0);
+
+        for(int i = senhaTestada.size() - 1; i >= 0 ; i--) {
+
+            for (int j = 0; j < 10; j++) {
+                senhaTestada.set(i, j);
+                String testSenha = getStringByList(senhaTestada);
+                if (testSenha.equals(String.valueOf(senhaVerdadeira))) {
+                    return Integer.parseInt(testSenha);
+                }
+            }
+
+
+            if(todosNumerosSaoNove(senhaTestada)){
+                zeraTodosOsCaracteresDaSenha(senhaTestada);
+                senhaTestada.add(0);
+                // da pra zerar e tirar o do while
+                i = senhaTestada.size();
+            }
+            else{
+                int posicaoNumeroAnterior = i - 1;
+                if(senhaTestada.size() > 1 && senhaTestada.get(posicaoNumeroAnterior) != 9){ // nao é um numero só, nem o último  && i < (senhaTestada.size() - 1)?
+                    int novoNumero = senhaTestada.get(posicaoNumeroAnterior) + 1;
+                    senhaTestada.set(posicaoNumeroAnterior, novoNumero);
+                    i = senhaTestada.size();
+                    zeraTodosOsCaracteresDaSenhaDepoisDoAumento(senhaTestada, posicaoNumeroAnterior);
+                }
+            }
+
+        }
+        return -1;
+    }
+
+    private void zeraTodosOsCaracteresDaSenhaDepoisDoAumento(List<Integer> senhaTestada, int posicaoNumeroAnterior) {
+        for(int i = 0; i < senhaTestada.size(); i++){
+            if(i > posicaoNumeroAnterior){
+                senhaTestada.set(i,0);
+            }
+        }
+    }
+
+    private boolean todosNumerosSaoNove(List<Integer> senhaTestada) {
+        boolean todosNove = true;
+        for(int i = 0; i < senhaTestada.size(); i++){
+           if(senhaTestada.get(i) != 9){
+               todosNove = false;
+           }
+        }
+
+        return todosNove;
+    }
+
+    private void zeraTodosOsCaracteresDaSenha(List<Integer> senhaTestada) {
+        for(int i = 0; i < senhaTestada.size(); i++){
+            senhaTestada.set(i,0);
+        }
+    }
+
+    private String getStringByList(List<Integer> senhaTestada) {
         String senha = "";
 
         for(int i = 0; i < senhaTestada.size(); i++){
