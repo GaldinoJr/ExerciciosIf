@@ -343,8 +343,67 @@ public class ExerciciosFor {
         return -1;
     }
 
+    String testesEstruturasFor() {
+        Integer[] valores = new Integer[3];
 
-    void test(int value) {
+        String resultado = "";
 
+        valores[0] = 30;
+        valores[1] = 43;
+        valores[2] = 50;
+
+        // FOR
+        resultado = resultado + "FOR - ";
+
+        for (int i = 0; i < 3; i++){
+            Integer valor = valores[i];
+            resultado += valor + ", ";
+        }
+        resultado +=  "\nFOREACH - ";
+
+
+        // FOREACH
+        for (int valor: valores){
+            resultado += valor + ", ";
+        }
+
+        resultado +=  "\nWHILE - ";
+        // WHILE
+        int i = 0;
+        while (i < 3){
+            Integer valor = valores[i];
+            resultado += valor + ", ";
+
+            i++;
+        }
+
+        resultado +=  "\nWHILE2 - ";
+
+        boolean continuar = true;
+        i = 0;
+
+        while (continuar){
+
+            Integer valor = valores[i];
+            resultado += valor + ", ";
+
+            if(i > 1){
+                continuar = false;
+            }
+
+            i++;
+        }
+
+        resultado +=  "\nDO WHILE - ";
+        // DO WHILE
+        i = 0;
+        do {
+            Integer valor = valores[i];
+            resultado += valor + ", ";
+
+            i++;
+        } while (i < 3);
+
+        return resultado;
     }
 }

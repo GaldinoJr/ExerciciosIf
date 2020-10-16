@@ -71,4 +71,11 @@ class TestesExerciciosFor {
         val valorResultado = exerciciosFor.descobrirSenhaComTresOuMaisNumeros2(senha)
         assertEquals(senha, valorResultado)
     }
+
+    @Test
+    fun testesEstruturasForTest(){
+        val resultado = ExerciciosFor().testesEstruturasFor()
+
+        assertEquals("", resultado)
+    }
 }
