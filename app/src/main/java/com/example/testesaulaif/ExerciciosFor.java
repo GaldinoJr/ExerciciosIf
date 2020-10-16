@@ -412,6 +412,21 @@ public class ExerciciosFor {
      * Calcule e devolva o resultado
      */
     public double calcularReceita(double receita, double despesa){
-        return -1;
+        double resultado;
+
+        resultado = receita - despesa;
+
+        return resultado;
+    }
+
+    /**
+     * 2 - Faça um programa, que voce passe por parametro dois vetores de 10 Projetos cada um,
+     * Lista 1 - Receitas
+     * Lista 2 - Despesas
+     * Calcule os resultados em um novo vetor devolva esse vetor
+     * obs.: Os indices dos vetores, são os ids de referencia para os projetos
+     */
+    public Double[] calcularReceitaProjetos(Double[] receitas, Double[] despesas){
+        return new Double[10];
     }
 }
