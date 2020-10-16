@@ -78,4 +78,15 @@ class TestesExerciciosFor {
 
         assertEquals("", resultado)
     }
+
+    @Test
+    fun calcularReceita(){
+        var resultado = ExerciciosFor().calcularReceita(1000.0, 5000.0)
+
+        assertEquals(-4000, resultado)
+
+        resultado = ExerciciosFor().calcularReceita(1000.0, 500.0)
+
+        assertEquals(500, resultado)
+    }
 }

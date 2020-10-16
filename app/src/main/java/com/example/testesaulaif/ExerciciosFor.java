@@ -406,4 +406,12 @@ public class ExerciciosFor {
 
         return resultado;
     }
+
+    /**
+     * 1 - Faça um programa, que voce passe por parametro o valor da Receita, e o valor da Despesa
+     * Calcule e devolva o resultado
+     */
+    public double calcularReceita(double receita, double despesa){
+        return -1;
+    }
 }
