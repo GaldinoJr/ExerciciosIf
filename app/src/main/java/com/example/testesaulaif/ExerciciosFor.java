@@ -427,6 +427,15 @@ public class ExerciciosFor {
      * obs.: Os indices dos vetores, são os ids de referencia para os projetos
      */
     public Double[] calcularReceitaProjetos(Double[] receitas, Double[] despesas){
-        return new Double[10];
+        Double[] resultados = new Double[10];
+
+        for(int i=0; i<10; i++){
+
+            double resultado = receitas[i] - despesas[i];
+
+            resultados[i] = resultado;
+        }
+
+        return resultados;
     }
 }

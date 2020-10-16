@@ -89,4 +89,24 @@ class TestesExerciciosFor {
 
         assertEquals(500, resultado)
     }
+
+    @Test
+    fun calcularReceitaProjetosTest(){
+        val receitas = arrayOfNulls<Double>(10)
+        val despesas = arrayOfNulls<Double>(10)
+
+        val valorReceita = 1000.0
+        val valorDespesa = 500.0
+
+        for (i in 0 until 10){
+            receitas[i] = valorReceita + i;
+            despesas[i] = valorDespesa - i;
+        }
+
+        val resultados = ExerciciosFor().calcularReceitaProjetos(receitas, despesas)
+
+        assertEquals(502.0, resultados[1])
+
+        assertEquals(518.0, resultados[9])
+    }
 }
